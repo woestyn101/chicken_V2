@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS chicken_db;
+CREATE DATABASE  chicken_db;
