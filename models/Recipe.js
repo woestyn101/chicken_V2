@@ -37,8 +37,8 @@ Recipe.init(
     timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: 'blogposts',
+    modelName:'recipes',
   }
 );
 
-module.exports = Blogpost;
+module.exports = Recipes;
