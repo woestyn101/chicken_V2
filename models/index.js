@@ -11,3 +11,9 @@ User.hasMany(Recipe, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE',
 })
+
+module.exports = {
+    User,
+   Recipe,
+     
+  };
