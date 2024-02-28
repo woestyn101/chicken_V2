@@ -28,9 +28,6 @@ Blogpost.init(
       },
       
     }
-      
-     
-   
   },
   {
     sequelize,
