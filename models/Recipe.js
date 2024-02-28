@@ -1,11 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Blogpost extends Model {}
+class Recipe extends Model {}
 
-Blogpost.init(
+Recipe.init(
   {
-    bp_id: {
+    r_id: {
       type: DataTypes.INTEGER,
       notNull: true,
       primaryKey: true,
@@ -15,7 +15,7 @@ Blogpost.init(
       type: DataTypes.STRING,
      notNull: true,
     },
-    p_content: {
+    ingredients: {
         type: DataTypes.TEXT,
         notNull: true,
       },
@@ -34,8 +34,8 @@ Blogpost.init(
     timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: 'blogposts',
+    modelName:'recipes',
   }
 );
 
-module.exports = Blogpost;
+module.exports = Recipe;
