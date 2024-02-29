@@ -1,6 +1,6 @@
 nav {
-    background-color: orange;
-    color: #fff;
+    background-color: orange;   
+    color: black;
     padding: 30px 60px;
     display: flex;
     justify-content: space-between;
@@ -10,6 +10,7 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: black;
 }
 
 nav li {
