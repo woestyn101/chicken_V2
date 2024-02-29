@@ -1,16 +1,34 @@
+const router = require('express').Router();
+const path = require('path');
 
-const router = require("express").Router();
-// const { Project, User } = require('../models');
-//const withAuth = require("../utils/auth");
 
-router.get("/", async (req, res) => {
-  try {
-    res.render("home");
-  } catch (err) {
-    console.error(err);
-    res.status(500).json(err);
-  }
+
+// This is the 'get' route 
+router.get('/', async (req, res) => {
+  res.render('home');
 });
 
-module.exports = router;
+router.get('/login', async (req, res) => {
+  
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+  res.render('login');
+ 
+});
 
+
+
+router.get('/signup', async (req, res) => {
+  res.render('signup');
+});
+
+
+router.get('/logout', async (req, res) => {
+  res.render('logout');
+});
+
+
+
+module.exports = router;
