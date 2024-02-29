@@ -28,9 +28,6 @@ Recipe.init(
       },
       
     }
-      
-     
-   
   },
   {
     sequelize,
