@@ -19,6 +19,10 @@ Recipe.init(
         type: DataTypes.TEXT,
         notNull: true,
       },
+     instructions: {
+        type: DataTypes.TEXT,
+        notNull: true,
+      },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
