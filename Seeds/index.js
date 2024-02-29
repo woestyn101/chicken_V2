@@ -1,12 +1,11 @@
-const seedCategories = require('./Category-Seeds');
 const userSeeds = require('./User-seeds');
 const recipeSeeds = require('./Recipe-seeds');
+
+const sequelize = require('../config/connection');
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });
     console.log('\n----- DATABASE SYNCED -----\n');
-    await seedCategories();
-    console.log('\n----- CATEGORIES SEEDED -----\n');
   
     await recipeSeeds();
     console.log('\n----- RECEPIES SEEDED -----\n');
