@@ -50,4 +50,27 @@ router.get('/:id', async (req, res) => {
 
 
 
+router.delete('/:id', async (req, res) =>{
+  try {
+    const recipeId = req.params.id;
+    const recipe = await Recipe.findByPk(recipeId);
+    
+    if (!recipe) {
+      return res.status(404).json({ error: 'Recipe not found' });
+    }
+
+    await recipe.destroy();
+    res.status(204).end(); 
+  } catch (error) {
+    res.status(500).json(err);
+  }
+});
+
+// {
+//   "title": "pp",
+//   "ingredients": "pppppppppppppppppp ",
+// 	"instructions": "pppppppppppppppppppp"
+// }
+
+
 module.exports = router;
