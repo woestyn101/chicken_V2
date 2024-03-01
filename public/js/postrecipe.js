@@ -1,4 +1,4 @@
-var postRecipeForm = document.querySelector('.post-user');
+var postRecipeForm = document.querySelector('.recipe-user');
 
 
 const postRecipeHandler = async (event) => {
@@ -11,8 +11,8 @@ const postRecipeHandler = async (event) => {
     const userInstructions = document.querySelector('#yourinstructions').value.trim();
 
   
-    if (title && userPost) {
-      const response = await fetch('/api/blogpost', {
+    if (title && userIngredients && userInstructions) {
+      const response = await fetch('/api/recipes', {
         method: 'POST',
         body: JSON.stringify({ title, userIngredients, userInstructions }),
         headers: { 'Content-Type': 'application/json' },
