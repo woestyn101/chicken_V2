@@ -67,7 +67,7 @@ router.delete('/:id', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    const userData = await User.findOne({ where: { username: req.body.username } });
 
     if (!userData) {
       res
@@ -86,7 +86,7 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = userData.u_id;
       req.session.logged_in = true;
       
       res.json({ user: userData, message: 'You are now logged in!' });
@@ -111,22 +111,7 @@ router.post('/logout', (req, res) => {
 //   "username": "zachary",
 //   "password": "password"
 // }
-CREATE a user
-router.post('/', (req, res) => {
-    // Use Sequelize's `create()` method to add a row to the table
-    // Similar to `INSERT INTO` in plain SQL
-    User.create({
-      username: req.body.username,
-      password: req.body.password,
-         })
-      .then((newUser) => {
-        // Send the newly created row as a JSON object
-        res.json(newUser);
-      })
-      .catch((err) => {
-        res.json(err);
-      });
-  });
+
 
 
   

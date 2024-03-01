@@ -1,4 +1,4 @@
-var signInForm = document.querySelector('.signin-user');
+var signInForm = document.querySelector('.login-user');
 
 
 const signInFormHandler = async (event) => {
@@ -11,7 +11,7 @@ const signInFormHandler = async (event) => {
 
   
     if (username && password) {
-      const response = await fetch('/api/users/signin', {
+      const response = await fetch('/api/users/login', {
         method: 'POST',
         body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },
