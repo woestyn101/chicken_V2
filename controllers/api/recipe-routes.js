@@ -1,12 +1,15 @@
 const { Model, DataTypes } = require('sequelize');
 const router = require('express').Router();
 const path = require('path');
-const { Recipe } = require('../../models');
+const { User, Recipe } = require('../../models');
 
 
 
 router.post('/', (req, res) => {
-    console.log("add recipe route");
+    // console.log(req.body.title);
+    // console.log(req.body.userIngredients);
+    // console.log(req.body.userInstructions);
+    // console.log(req.session.user_id);
     // Use Sequelize's `create()` method to add a row to the table
     // Similar to `INSERT INTO` in plain SQL
     Recipe.create({

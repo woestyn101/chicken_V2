@@ -67,7 +67,7 @@ router.delete('/:id', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { username: req.body.username } });
+    const userData = await User.findOne({ where: { username : req.body.username } });
 
     if (!userData) {
       res

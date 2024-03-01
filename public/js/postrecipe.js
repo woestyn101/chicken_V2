@@ -12,7 +12,9 @@ const postRecipeHandler = async (event) => {
     console.log(userInstructions);
 
   
-    if (title && userIngredients, userInstructions) {
+
+    if (title && userIngredients && userInstructions) {
+
       const response = await fetch('/api/recipes', {
         method: 'POST',
         body: JSON.stringify({ title, userIngredients, userInstructions }),
