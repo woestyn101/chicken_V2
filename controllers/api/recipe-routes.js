@@ -11,8 +11,8 @@ router.post('/', (req, res) => {
     // Similar to `INSERT INTO` in plain SQL
     Recipe.create({
       title: req.body.title,
-      ingredients: req.body.youringredients,
-      instructions: req.body.yourinstructions,
+      ingredients: req.body.userIngredients,
+      instructions: req.body.userInstructions,
       user_id: req.session.user_id
          })
       .then((newRecipe) => {
