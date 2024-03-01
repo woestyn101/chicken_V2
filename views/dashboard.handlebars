@@ -1,5 +1,5 @@
 <h2>Your Dashboard</h2>
-<h2>Welcome {{ username }}</h2>
+<h2>Welcome {{ req.session.username }}</h2>
 <div class="container mt-4">
         <div class="card" >
             <div class="card-header">
@@ -15,13 +15,13 @@
               <div class="mb-3">
                 <label for="youringredients" class="form-label">Ingredients</label>
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="youringredients"></textarea>                
+                <textarea class="form-control"  id="youringredients"></textarea>                
                 </div>
 
                 <div class="mb-3">
                 <label for="yourinstructions" class="form-label">Instructions</label>
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="yourinstructions"></textarea>                
+                <textarea class="form-control"  id="yourinstructions"></textarea>                
                 </div>
                 
             </div>
@@ -29,4 +29,4 @@
             <button type="submit" class="btn btn-primary">post</button>
      </form>
 
-      <script src="./js/postblog.js"></script>
+      <script src="./js/postrecipe.js"></script>
