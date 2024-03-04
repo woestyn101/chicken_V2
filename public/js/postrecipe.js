@@ -4,7 +4,6 @@ var postRecipeForm = document.querySelector('.recipe-user');
 const postRecipeHandler = async (event) => {
     event.preventDefault();
     
-  
     const title = document.querySelector('#title').value.trim();
     const userIngredients = document.querySelector('#youringredients').value.trim();
     const userInstructions = document.querySelector('#yourinstructions').value.trim();
