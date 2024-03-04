@@ -2,6 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const router = require('express').Router();
 const path = require('path');
 const { User, Recipe } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 
 
@@ -38,7 +39,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
     const recipe = await Recipe.findByPk(req.params.id);
     if (recipe) {
