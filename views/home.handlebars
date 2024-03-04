@@ -1,1 +1,17 @@
 <h2>Welcome to my blog!</h2>
+
+<!-- Loop over each object in the projects array -->
+{{#each recipeposts as |userrecipe| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+    
+      <a href="/api/blogpost/{{userrecipe.r_id}}">{{userrecipe.title}}</a>
+    </h2>
+    
+    <p>Created by {{userrecipe.user.username}} on {{format_date userrecipe.createdAt}}</p>
+  </div>
+  
+</div>
+{{/each}}
