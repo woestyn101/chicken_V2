@@ -11,11 +11,16 @@
       <nav>
         <h4>Chicken blog</h4>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/dashboard">dashboard</a></li>
-            <li><a href="/login">Sign in</a></li>
-            <li><a href="/signup">Signup</a></li>
-            <li><a href="/logout">logout</a></li>
+            <li><a href="/">Home</a></li>          
+           
+            <li><a href="/signup">Signup</a></li>          
+
+             {{#if logged_in}}
+              <li><a href="/dashboard">dashboard</a></li> |
+             <li><a href="/logout">logout</a></li>
+              {{else}}
+              <li><a href="/login">Sign in</a></li>
+              {{/if}}
         </ul>
     </nav>
        <main class="container container-fluid mt-5">    
