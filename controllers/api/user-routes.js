@@ -2,17 +2,6 @@ const router = require('express').Router();
 const path = require('path');
 const { User, Recipe } = require('../../models');
 
-
-router.post('/', async (req, res) => {
-  try{
-    const userdata = await User.create(req.body);
-
-    res.status(200).json(userdata);
-  }catch{
-    res.status(400).json(err);
-  }
-});
-
 // CREATE a user
 router.post('/', (req, res) => {
     // Use Sequelize's `create()` method to add a row to the table
