@@ -29,3 +29,7 @@ nav li a:hover {
     color:yellow;
     text-decoration: none;
 }
+
+.dropdown{
+    display: none;
+}
