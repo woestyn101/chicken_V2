@@ -1,11 +1,9 @@
 # Chicken_V2
 
 ## Description:
--This is a recepie blog where you can add and rate recepies with the ability to create an account and see everything you have added or rated from wherever and whenever.
--We had to learn and work together to use MYSQL, Handlebars and auth.
--Our main struggles were git and working with how to add parts of an array to a sql database.
+This is a recepie blog where you can add and rate recepies with the ability to create an account and see everything you have added or rated from wherever and whenever. We had to learn and work together to use MYSQL, Handlebars and auth. Our main struggles were git and working with how to add parts of an array to a sql database.
 
-##Dependencies 
+## Dependencies 
 - Node.js: A JavaScript runtime used to build the server-side logic of the application.
 - Express.js: A web application framework for Node.js used to build the RESTful API and handle routing.
 - Handlebars.js: A templating engine used to generate HTML markup for the views.
