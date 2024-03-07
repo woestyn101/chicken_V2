@@ -100,9 +100,4 @@ router.post('/logout', (req, res) => {
 //   "username": "zachary",
 //   "password": "password"
 // }
-
-
-
-  
-
 module.exports = router;
