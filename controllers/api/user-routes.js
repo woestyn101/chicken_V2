@@ -2,6 +2,11 @@ const router = require('express').Router();
 const path = require('path');
 const { User, Recipe } = require('../../models');
 
+const resetSessionTimeout = (req, res, next) => {
+  req.session.lastActive = Date.now();
+  next();
+};
+
 // CREATE a user
 router.post('/', (req, res) => {
     // Use Sequelize's `create()` method to add a row to the table
@@ -104,5 +109,5 @@ router.post('/logout', (req, res) => {
 
 
   
-
+router.use(resetSessionTimeout);
 module.exports = router;
