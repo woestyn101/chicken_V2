@@ -30,4 +30,22 @@ nav li a:hover {
     text-decoration: none;
 }
 
+.dropdown{
+    display: block;
+    border-radius: 1.25rem;
+    box-shadow: 0 5px 5px 0 #000;
+}
 
+#dropdown-button{
+    color: black;
+    display: inline-block;
+    text-decoration: solid;
+    padding: 10px;
+    border: none;
+    background: none;
+}
+
+#instructions{
+    padding: 25px;
+    display: inline-block;
+}

@@ -6,14 +6,15 @@
   <div class="col-md-5">
     <h2>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-      <button id="dopdown-button">{{userrecipe.title}}</button>
+      <button id="dropdown-button">{{userrecipe.title}}</button>
+      
     </h2>
     <div class="dropdown" style="display: none;">
             <span class="selected">
                 <p href="/api/blogpost/{{userrecipe.r_id}}">{{userrecipe.ingredients}}</a>
             </span>
             <span>
-                 <a href="{{userrecipe.instructions}}"> The instructions Are Here : {{userrecipe.instructions}}</a>
+                 <a id="instructions" href="{{userrecipe.instructions}}"> The instructions Are Here : {{userrecipe.instructions}}</a>
             </span>
     </div>
     <p>Created by {{userrecipe.user.username}} on {{format_date userrecipe.createdAt}}</p>
@@ -23,3 +24,5 @@
 {{/each}}
 
  <script src="./js/home.js"></script>
+ 
+
