@@ -3,7 +3,7 @@
 ## Description:
 This is a recepie blog where you can add and rate recepies with the ability to create an account and see everything you have added or rated from wherever and whenever. We had to learn and work together to use MYSQL, Handlebars and auth. Our main struggles were git and working with how to add parts of an array to a sql database.
 
-[Video on how to use this app](https://chicken-v2-4c56e0e55a57.herokuapp.com/)
+[Link to app](https://chicken-v2-4c56e0e55a57.herokuapp.com/)
 
 
 ![alt text](https://github.com/woestyn101/chicken_V2/blob/main/public/photo/Screenshot%202024-03-06%20203259.png)
