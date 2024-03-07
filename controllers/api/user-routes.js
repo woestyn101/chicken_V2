@@ -100,9 +100,4 @@ router.post('/logout', (req, res) => {
 //   "username": "zachary",
 //   "password": "password"
 // }
-
-
-
-  
-router.use(resetSessionTimeout);
 module.exports = router;
