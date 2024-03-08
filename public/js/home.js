@@ -1,10 +1,3 @@
-
-
-$(document).ready(function(){
-    $('.dropdown-button').click(function() {
-      $('.dropdown').toggle("slide");
-    });
-});
 $('div.dropdown').each(function(eq, el) {
   el = $(el);
   if (typeof(el.attr('id')) === "undefined") {
@@ -12,9 +5,6 @@ $('div.dropdown').each(function(eq, el) {
     console.log(el.prop('id'));
   }
 });
-
-
-
 $('button.dropdown-button').each(function(eq, el) {
   el = $(el);
   if (typeof(el.attr('id')) === "undefined") {
@@ -22,7 +12,6 @@ $('button.dropdown-button').each(function(eq, el) {
     console.log(el.prop('id'));
   }
 });
-
 $(document).ready(function(){
   $('#button-0').click(function() {
     $('#div-0').toggle("slide");
@@ -101,5 +90,27 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('#button-15').click(function() {
     $('#div-15').toggle("slide");
+  });
+});
+
+//when dropdown button is hit it will change back ground from orange to white when opened
+function expandProject(projectElement) {
+  projectElement.classList.toggle('expanded'); 
+  if (projectElement.classList.contains('expanded')) {
+    projectElement.style.backgroundColor = 'white';
+  } else {
+    projectElement.style.backgroundColor = 'orange';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownButtons = document.querySelectorAll('.dropdown-button');
+
+  dropdownButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const projectElement = button.closest('.project');
+ 
+      expandProject(projectElement);
+    });
   });
 });
