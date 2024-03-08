@@ -54,18 +54,39 @@ router.get('/:id', withAuth, async (req, res) => {
 
 
 
-router.delete('/:id', async (req, res) =>{
-  try {
-    const recipeId = req.params.id;
-    const recipe = await Recipe.findByPk(recipeId);
+// router.delete('/:id', async (req, res) =>{
+//   try {
+//     const recipeId = req.params.id;
+//     const recipe = await Recipe.findByPk(recipeId);
     
-    if (!recipe) {
-      return res.status(404).json({ error: 'Recipe not found' });
+//     if (!recipe) {
+//       return res.status(404).json({ error: 'Recipe not found' });
+//     }
+
+//     await recipe.destroy();
+//     res.status(204).end(); 
+//   } catch (error) {
+//     res.status(500).json(err);
+//   }
+// });
+
+//delete route with authentication
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    const recipeData = await Recipe.destroy({
+      where: {
+        r_id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+
+    if (!recipeData) {
+      res.status(404).json({ message: 'No project found with this id!' });
+      return;
     }
 
-    await recipe.destroy();
-    res.status(204).end(); 
-  } catch (error) {
+    res.status(200).json(recipeData);
+  } catch (err) {
     res.status(500).json(err);
   }
 });
