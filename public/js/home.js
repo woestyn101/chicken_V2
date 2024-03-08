@@ -10,3 +10,18 @@ $('div.dropdown').each(function(eq, el) {
     console.log(el.prop('id'));
   }
 });
+
+//changes color from orange to white when opened
+function expandProject(projectElement) {
+  projectElement.classList.add('expanded');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const projects = document.querySelectorAll('.project');
+
+  projects.forEach(function(project) {
+    project.addEventListener('click', function() {
+      expandProject(project);
+    });
+  });
+});
