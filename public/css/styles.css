@@ -30,20 +30,55 @@ nav li a:hover {
     text-decoration: none;
 }
 
-.dropdown{
-    display: block;
-    border-radius: 1.25rem;
-    box-shadow: 0 5px 5px 0 #000;
-}
-
-.dropdown-button{
-    color: black;
-    display: inline-block;
-    text-decoration: solid;
-    padding: 10px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .project {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  .project h2 {
+    margin-top: 0;
+  }
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-button {
+    background-color: transparent;
     border: none;
-    background: none;
-}
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    color: #007bff;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content p {
+    margin-bottom: 10px;
+  }
 
 #instructions{
     padding: 25px;
