@@ -29,4 +29,40 @@
             <button type="submit" class="btn btn-primary">post</button>
      </form>
 
+     </div>
+
+     
+<div class="container mt-4">
+  <div class="card" >
+    <div class="card-body">
+    <h5 class="card-title">Your projects:</h5>
+    <p class="card-text">
+
+  <!-- checking for posts from database and outputting to html-->
+  {{#if recipes.length}}
+  <div class="col-md-6 project-list">
+   
+
+    {{#each recipes as |userrecipe|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4>{{userrecipe.title}}</h4>
+      </div>
+      
+      <div class="col-md-2">
+        <button id="delBtn" onclick="delButtonHandler(event)" class="btn btn-sm btn-danger" data-id="{{userrecipe.r_id}}">DELETE</button>
+      </div>
+
+      
+      
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+
+    </p>
+    
+  </div>
+</div>
+
       <script src="./js/postrecipe.js"></script>
