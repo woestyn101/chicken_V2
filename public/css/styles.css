@@ -87,3 +87,8 @@ body {
     padding: 25px;
     display: inline-block;
 }
+
+#logout {
+  color:white;
+  cursor: pointer;
+}
